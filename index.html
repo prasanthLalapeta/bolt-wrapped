@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Check for dark mode preference
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="My Bolt Journey" />
+    <meta property="og:description" content="Check out my Bolt Journey!" />
+    <meta property="og:image" content="./public/bolt-new-wrapped.png" />
+    <meta property="og:url" content="https://dub.sh/bolt-wrapped" />
+    <meta property="og:type" content="website" />
+    <title>Bolt.new Wrapped ⚡</title>
+  </head>
+  <body class="min-h-screen bg-background">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
